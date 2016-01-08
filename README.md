@@ -5,4 +5,4 @@ $this->dispatcher->forward([
 	'controller' => 'login',
 	'action' => 'test'
 ]);
-After some attempts and checking the syntax multiple times the error persisted, I will wait to find an answer from other sources and just continue the classes for now.
+After some attempts and checking the syntax multiple times the error persisted, I will wait to find an answer from other sources and just continue the classes for now. A numbers of notes have been made throught the classes as comments. Everything very smooth so far.

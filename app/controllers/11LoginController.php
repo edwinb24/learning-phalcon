@@ -4,7 +4,7 @@ class LoginController extends \Phalcon\Mvc\Controller
 {
 	public function initialize()
 	{
-		$this->view->setTemplateAfter('default');
+		echo "**INIT**";
 	}
 	
 	public function indexAction()
@@ -23,34 +23,19 @@ class LoginController extends \Phalcon\Mvc\Controller
 	
 	public function processAction($username = false, $age = 12)
 	{
-		//When views are used the echos stop showing up
 		echo "Processing";
 		echo $username;
 		echo $age;
 		
-		//The following lines are sending the variables to the view
-		$this->view->setVar('username', $username);
-		$this->view->setVar('age', $age);	
-		
-		//This line can be use to disable the views
-		 //$this->view->disable();
-		//This line disable by levels
-			$this->view->disableLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
-		
-		
-		/*Part of this example
 		$this->dispatcher->forward([
 		'controller' => 'login',
 		'action' => 'test'
 		]);
-		*/
 		//This forward the controller to testAction 
 	}
 	
-	/*Part of this example
 	public function testAction()
 	{	
 		echo "--TEST ACTION --";
 	}
-	*/
-	}
+}
